@@ -28,3 +28,20 @@ int main() {
         hapusBuku(d, "BK-002") && cariKode(d, "BK-002") == nullptr,
         "F1: ubah dan hapus buku berhasil");
 }
+
+    tambahAnggota(a, {"AG-001", "Rina", "Teknik Komputer", 0});
+    tambahAnggota(a, {"AG-002", "Doni", "Teknologi Informasi", 0});
+    tambahAnggota(a, {"AG-003", "Lina", "Informatika", 0});
+    cek(a.n == 3 && a.kapasitas >= 3, "F2: array dinamis anggota membesar otomatis");
+
+    cek(!tambahAnggota(a, {"AG-001", "Duplikat", "TI", 0}) &&
+        ubahAnggota(a, "AG-002", "Doni Pratama", "Sistem Informasi") &&
+        cariAnggota(a, "AG-002")->nama == "Doni Pratama",
+        "F2: ID anggota ganda ditolak dan ubah anggota berhasil");
+
+    bebaskan(d);
+    bebaskan(a);
+
+    cout << lulus << " lulus, " << gagal << " gagal\n";
+    return gagal == 0 ? 0 : 1;
+}
