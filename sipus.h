@@ -60,7 +60,7 @@ struct DaftarTransaksi {
     Transaksi* data;
     int n, kapasitas;
 };
-
+// ---- Modul Buku (Mahasiswa A) ----
 bool formatKodeBukuValid(const string& kode);
 void inisialisasi(DaftarBuku& d, int kapasitasAwal);
 void bebaskan(DaftarBuku& d);
@@ -72,6 +72,7 @@ bool ubahBuku(DaftarBuku& d, const string& kode, const string& judulBaru,
 bool hapusBuku(DaftarBuku& d, const string& kode);
 void tampilBuku(const DaftarBuku& d);
 
+// ---- Modul Anggota & Transaksi (Mahasiswa B) ----
 bool formatIdAnggotaValid(const string& id);
 void inisialisasi(DaftarAnggota& d, int kapasitasAwal);
 void bebaskan(DaftarAnggota& d);
