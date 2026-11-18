@@ -1,5 +1,5 @@
 SiPus: Sistem Peminjaman Perpustakaan Mini
-Kelompok : 4
+Kelompok : 04
 Anggota 1: Made Reindra Aryanatha / 260530911019
 Anggota 2: I Komang Trian Paradana / 260530911142
 
