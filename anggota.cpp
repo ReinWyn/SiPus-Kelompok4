@@ -4,7 +4,6 @@
 #include <cctype>
 using namespace std;
 
-//F2
 bool formatIdAnggotaValid(const string& id) {
     if (id.size() != 6) return false;
     if (id.substr(0, 3) != "AG-") return false;

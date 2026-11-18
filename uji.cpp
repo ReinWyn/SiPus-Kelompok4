@@ -24,20 +24,14 @@ int main() {
     Buku ganda = {"BK-001", "X", "Y", 0, 2020, 1, 0};
     cek(!tambahBuku(d, ganda), "F1: kode buku ganda ditolak");
 
-    cek(ubahBuku(d, "BK-003", "Basis Data Lanjut", "Sari", 1, 2023, 2) &&
-        hapusBuku(d, "BK-002") && cariKode(d, "BK-002") == nullptr,
-        "F1: ubah dan hapus buku berhasil");
-}
+    cek(ubahBuku(d, "BK-003", "Basis Data Lanjut", "Sari", 1, 2023, 2) && hapusBuku(d, "BK-002") && cariKode(d, "BK-002") == nullptr, "F1: ubah dan hapus buku berhasil");
 
     tambahAnggota(a, {"AG-001", "Rina", "Teknik Komputer", 0});
     tambahAnggota(a, {"AG-002", "Doni", "Teknologi Informasi", 0});
     tambahAnggota(a, {"AG-003", "Lina", "Informatika", 0});
     cek(a.n == 3 && a.kapasitas >= 3, "F2: array dinamis anggota membesar otomatis");
 
-    cek(!tambahAnggota(a, {"AG-001", "Duplikat", "TI", 0}) &&
-        ubahAnggota(a, "AG-002", "Doni Pratama", "Sistem Informasi") &&
-        cariAnggota(a, "AG-002")->nama == "Doni Pratama",
-        "F2: ID anggota ganda ditolak dan ubah anggota berhasil");
+    cek(!tambahAnggota(a, {"AG-001", "Duplikat", "TI", 0}) && ubahAnggota(a, "AG-002", "Doni Pratama", "Sistem Informasi") && cariAnggota(a, "AG-002")->nama == "Doni Pratama", "F2: ID anggota ganda ditolak dan ubah anggota berhasil");
 
     bebaskan(d);
     bebaskan(a);

@@ -38,6 +38,24 @@ void bebaskan(DaftarBuku& d) {
     d.kapasitas = 0;
 }
 
+Buku* cariKode(DaftarBuku& d, const string& kode) {
+    for (int i = 0; i < d.n; i++) {
+        if (d.data[i].kode == kode) {
+            return &d.data[i];
+        }
+    }
+    return nullptr;
+}
+
+const Buku* cariKodeConst(const DaftarBuku& d, const string& kode) {
+    for (int i = 0; i < d.n; i++) {
+        if (d.data[i].kode == kode) {
+            return &d.data[i];
+        }
+    }
+    return nullptr;
+}
+
 bool tambahBuku(DaftarBuku& d, const Buku& b) {
     if (!formatKodeBukuValid(b.kode)) return false;
     if (b.judul.empty() || b.penulis.empty()) return false;
